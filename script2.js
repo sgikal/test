@@ -2,9 +2,9 @@
 const MI_API_URL = "https://sheetdb.io/api/v1/29bg5nsb96dqg";
 
 const portales = [
-    "https://es.wikipedia.org/wiki/Progreso_(Yucat%C3%A1n)", // Botella 1
-    "https://www.google.com/logos/2010/pacman10-i.html",     // Botella 2
-    "https://antikythera.org.mx/"                           // Botella 3
+    "https://www.google.com", // Botella 1
+    "https://www.google.com/",     // Botella 2
+    "https://www.google.com/"                           // Botella 3
 ];
 
 // 2. ELEMENTOS DEL DOM 
