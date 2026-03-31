@@ -2,7 +2,7 @@
 const MI_API_URL = "https://sheetdb.io/api/v1/29bg5nsb96dqg";
 
 const portales = [
-    "https://www.google.com", // Botella 1
+    "pagina2.html", // Botella 1
     "https://www.google.com/",     // Botella 2
     "https://www.google.com/"                           // Botella 3
 ];
