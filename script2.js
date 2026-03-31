@@ -2,9 +2,9 @@
 const MI_API_URL = "https://sheetdb.io/api/v1/29bg5nsb96dqg";
 
 const portales = [
-    "https://www.youtube.com", // Botella 1
+    "https://www.wikipedia.org", // Botella 1
     "https://nochesdekukulkan.com.mx/evento/3",     // Botella 2
-    "https://app.bibguru.com/p/b7bc3cc8-4883-49d2-acef-24f29d1e1d2f"                           // Botella 3
+    "https://www.openstreetmap.org"                           // Botella 3
 ];
 
 // 2. ELEMENTOS DEL DOM 
