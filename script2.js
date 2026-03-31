@@ -2,8 +2,8 @@
 const MI_API_URL = "https://sheetdb.io/api/v1/29bg5nsb96dqg";
 
 const portales = [
-    "pagina2.html", // Botella 1
-    "https://www.google.com/",     // Botella 2
+    "https://www.youtube.com", // Botella 1
+    "https://nochesdekukulkan.com.mx/evento/3",     // Botella 2
     "https://www.google.com/"                           // Botella 3
 ];
 
@@ -42,7 +42,7 @@ bottles.forEach((bottle, index) => {
             paper.classList.add('wide'); 
             webPortal.src = portales[index];
         } 
-        // BOTELLA 4 (Mensajes de Google Sheets)
+        // BOTELLA 4 (Mensajes)
         else { 
             webContent.style.display = 'none';
             specialContent.style.display = 'block';
@@ -91,7 +91,7 @@ saveBtn.addEventListener('click', () => {
             userInput.value = "";
             saveBtn.innerText = "Lanzar al mar";
             saveBtn.disabled = false;
-            alert("¡Mensaje lanzado al océano de Memorias! 🌊");
+            alert("¡Mensaje lanzado al océano de Memorias!");
             overlay.style.display = 'none';
         })
         .catch(err => {
