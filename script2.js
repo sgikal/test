@@ -115,3 +115,91 @@ window.onclick = (e) => {
         cerrarModal();
     }
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+    const bottles = document.querySelectorAll('.bottle');
+    
+    
+    const lightningFlash = document.createElement('div');
+    lightningFlash.className = 'lightning-flash';
+    document.body.appendChild(lightningFlash);
+
+    bottles.forEach(bottle => {
+        const effect = bottle.getAttribute('data-effect');
+        let effectContainer;
+
+        
+        if (effect === 'rain' || effect === 'wind') {
+            effectContainer = document.createElement('div');
+            effectContainer.className = 'effect-container';
+            bottle.appendChild(effectContainer); 
+        }
+
+        bottle.addEventListener('mouseenter', () => {
+            if (!effectContainer && effect !== 'lightning') return;
+
+            if (effect === 'rain') {
+                createRain(effectContainer);
+            } else if (effect === 'wind') {
+                createWind(effectContainer);
+            } else if (effect === 'lightning') {
+                triggerLightning(lightningFlash);
+            }
+        });
+
+    
+        bottle.addEventListener('mouseleave', () => {
+            if (effectContainer) {
+                effectContainer.innerHTML = '';
+            }
+        });
+    });
+});
+
+
+function createRain(container) {
+    container.innerHTML = ''; 
+   
+    for (let i = 0; i < 80; i++) {
+        const drop = document.createElement('div');
+        drop.className = 'rain-drop';
+        
+       drop.style.left = Math.random() * 300 + 'px'; 
+        
+        drop.style.animationDelay = Math.random() * 2 + 's';
+        drop.style.animationDuration = (Math.random() * 0.3 + 0.5) + 's'; 
+        container.appendChild(drop);
+    }
+}
+
+function createWind(container) {
+    container.innerHTML = ''; 
+    
+    for (let i = 0; i < 25; i++) {
+        const swirl = document.createElement('div');
+        swirl.className = 'wind-swirl';
+        
+        
+        const size = Math.random() * 60 + 30 + 'px';
+        swirl.style.width = size;
+        swirl.style.height = size;
+        
+        
+        swirl.style.left = Math.random() * 250 + 'px';
+        swirl.style.top = Math.random() * 300 + 'px';
+        
+        swirl.style.animationDelay = Math.random() * 4 + 's';
+        swirl.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        container.appendChild(swirl);
+    }
+}
+
+function triggerLightning(flashElement) {
+    
+    flashElement.classList.add('active');
+    
+    
+    setTimeout(() => {
+        flashElement.classList.remove('active');
+    }, 300); 
+}
