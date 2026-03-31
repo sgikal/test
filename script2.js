@@ -4,7 +4,7 @@ const MI_API_URL = "https://sheetdb.io/api/v1/29bg5nsb96dqg";
 const portales = [
     "https://www.wikipedia.org", // Botella 1
     "https://nochesdekukulkan.com.mx/evento/3",     // Botella 2
-    "https://www.openstreetmap.org"                           // Botella 3
+    "https://www.disneylatino.com/"                         // Botella 3
 ];
 
 // 2. ELEMENTOS DEL DOM 
